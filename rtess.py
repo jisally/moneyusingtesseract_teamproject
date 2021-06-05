@@ -1,3 +1,11 @@
+#tesseract 사용
+#국민은행 카드사용내용 picture1&2
+#카드 사용내용 문자 이미지를 tesseract를 사용하여 텍스트로 변환
+#변환한 것을 해당 카테고리, 몇월인지 선택 후 txt파일에 저장
+#txt파일에 금액만 남기고 삭제
+#월별 총 사용금액 합계 계산
+#소창 팀플에 사용하려했으나 다른 조원 컴퓨터에서 tesseract가 실행되지 않아서 사용못함->tesseract말고 은행에서 제공하는 엑셀파일 이용하여 가계부 프로그램 제작 예상
+
 import pytesseract
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
 print(pytesseract.image_to_string('C:\\Temp\picture1.jpg', lang='kor+eng', config='-c preserve_interword_spaces=1--psm4'))
